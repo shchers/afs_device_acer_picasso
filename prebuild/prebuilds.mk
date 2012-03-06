@@ -18,7 +18,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/acer/gps.tegra.so:system/lib/hw/gps.tegra.so \
     $(LOCAL_PATH)/acer/sensors.tegra.so:system/lib/hw/sensors.tegra.so \
     $(LOCAL_PATH)/acer/asound.conf:system/etc/asound.conf \
-    $(LOCAL_PATH)/acer/libasound.so:system/lib/libasound.so
+    $(LOCAL_PATH)/acer/libasound.so:system/lib/libasound.so \
+    $(LOCAL_PATH)/acer/init.rc:root/init.rc
 
 # Broadcom binaries
 PRODUCT_COPY_FILES += \
@@ -95,7 +96,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nvidia/libstagefrighthw.so:system/lib/libstagefrighthw.so \
     $(LOCAL_PATH)/nvidia/libEGL_tegra.so:system/lib/egl/libEGL_tegra.so \
     $(LOCAL_PATH)/nvidia/libGLESv1_CM_tegra.so:system/lib/egl/libGLESv1_CM_tegra.so \
-    $(LOCAL_PATH)/nvidia/libGLESv2_tegra.so:system/lib/egl/libGLESv2_tegra.so
+    $(LOCAL_PATH)/nvidia/libGLESv2_tegra.so:system/lib/egl/libGLESv2_tegra.so \
+    $(LOCAL_PATH)/nvidia/libardrv_dynamic.so:system/lib/libardrv_dynamic.so
 
 # Kernel modules
 ifneq ($(TARGET_PREBUILT_WIFI_MODULE),)

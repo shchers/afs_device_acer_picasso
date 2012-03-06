@@ -42,7 +42,7 @@
             android:emulated="true"
             android:mtpReserve="100" />
     <!-- external SD card -->
-    <storage android:mountPoint="/mnt/external1"
+    <storage android:mountPoint="/mnt/external_sd"
             android:storageDescription="@string/storage_sd_card"
             android:removable="true"
             android:maxFileSize="4096" />

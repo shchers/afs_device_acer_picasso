@@ -101,13 +101,19 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nvidia/libardrv_dynamic.so:system/lib/libardrv_dynamic.so
 
 # Kernel modules
-ifneq ($(TARGET_PREBUILT_WIFI_MODULE),)
-PRODUCT_COPY_FILES += \
-    $(TARGET_PREBUILT_WIFI_MODULE):system/lib/modules/bcm4329.ko
+# WiFi driver
+ifeq ($(TARGET_PREBUILT_WIFI_MODULE),)
+LOCAL_WIFI_MODULE := $(LOCAL_PATH)/modules/bcm4329.ko
 else
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/modules/bcm4329.ko:system/lib/modules/bcm4329.ko
+LOCAL_WIFI_MODULE := $(TARGET_PREBUILT_WIFI_MODULE)
 endif
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/modules/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko \
+    $(LOCAL_WIFI_MODULE):system/lib/modules/bcm4329.ko
+
+## FIXME: Some(???) scsi driver <- need to check!
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/modules/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko
+
+## NTFS filesystem module
+PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/modules/ufsd.ko:system/lib/modules/ufsd.ko

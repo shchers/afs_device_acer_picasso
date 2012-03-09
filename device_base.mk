@@ -91,7 +91,4 @@ ifneq ($(filter full_picasso picasso,$(TARGET_PRODUCT)),)
 $(call inherit-product-if-exists, vendor/acer/picasso/picasso-vendor.mk)
 endif
 
-WIFI_BAND := 802_11_ABG
-$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
-
 include device/acer/picasso/prebuild/prebuilds.mk

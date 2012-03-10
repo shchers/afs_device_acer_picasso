@@ -46,7 +46,8 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/base/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     frameworks/base/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
-    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
+    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml \
+    frameworks/base/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
 
 PRODUCT_COPY_FILES += \
     device/acer/picasso/vold.fstab:system/etc/vold.fstab \
@@ -72,6 +73,19 @@ PRODUCT_PACKAGES := \
 #    audio.primary.picasso
 #    audio_policy.picasso
 
+# Erricson 3G Modem/GPS
+# URL: http://sourceforge.net/apps/mediawiki/mbm/index.php?title=MBM_HAL_for_Android_Ice_Cream_Sandwich
+PRODUCT_PACKAGES += \
+    mbmd \
+    gps.$(TARGET_PRODUCT) \
+    MbmService \
+    libmbm-ril
+
+# List of APN config prepared by madhuranand007
+# URL: http://forum.xda-developers.com/showpost.php?p=11301556&postcount=1
+# Change date: 12th February 2011 at 07:41 AM
+PRODUCT_COPY_FILES += \
+    device/acer/picasso/apns-conf.xml:system/etc/apns-conf.xml
 
 PRODUCT_CHARACTERISTICS := tablet
 

@@ -66,12 +66,11 @@ PRODUCT_PACKAGES := \
     l2ping \
     hcitool \
     bttest \
-    com.android.future.usb.accessory
+    com.android.future.usb.accessory \
+    audio.primary.picasso
 #    camera.picasso
 #    sensors.picasso
 #    lights.picasso
-#    audio.primary.picasso
-#    audio_policy.picasso
 
 # Erricson 3G Modem/GPS
 # URL: http://sourceforge.net/apps/mediawiki/mbm/index.php?title=MBM_HAL_for_Android_Ice_Cream_Sandwich

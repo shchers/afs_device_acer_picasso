@@ -24,7 +24,9 @@ on fs
     setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
     mount ext4 /dev/block/mmcblk0p8 /data wait noatime nosuid nodev
     mount ext4 /dev/block/mmcblk0p4 /cache wait noatime nosuid nodev
-    mount ext4 /dev/block/mmcblk0p6 /system/vendor wait ro
+# Mounting of this partition disabled, because it doesn't contain any important
+# information only trial version of "popular" games
+#    mount ext4 /dev/block/mmcblk0p6 /system/vendor wait ro
 
 on post-fs-data
     mkdir /data/misc/wifi 0770 wifi wifi

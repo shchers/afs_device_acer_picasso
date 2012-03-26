@@ -65,7 +65,23 @@ BOARD_USES_GENERIC_AUDIO := false
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
-BOARD_HAVE_GPS := true
+# In case of use Ericsson Mobile Broadband module f5521gw please refer to:
+# http://sourceforge.net/apps/mediawiki/mbm/index.php?title=MBM_HAL_for_Android_Ice_Cream_Sandwich
+# and un-comment this property
+HAVE_ERICSSON_MBM := true
+ifneq ($(HAVE_ERICSSON_MBM),false)
+# Disabling Broadcom GPS devices
+BOARD_HAVE_GPS_BCM := false
+# Disablint qemu GPS deices
+USE_QEMU_GPS_HARDWARE := false
+# Enable MPM GPS devices
+BOARD_USES_MBM_GPS := true
+BOARD_GPS_LIBRARIES := gps.picasso
+else
+# Enable Broadcom GPS devices
+BOARD_HAVE_GPS_BCM := true
+endif
+
 
 USE_OPENGL_RENDERER := true
 BOARD_EGL_CFG := device/acer/picasso/egl.cfg
@@ -77,6 +93,7 @@ ifneq ($(HAVE_NVIDIA_PROP_SRC),false)
 endif
 
 # FIXME: We have no recovery :(
+
 #TARGET_RECOVERY_UI_LIB := librecovery_ui_picasso
 #TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 

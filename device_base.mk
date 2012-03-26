@@ -47,7 +47,8 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     frameworks/base/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml \
-    frameworks/base/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
+    frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+#    frameworks/base/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
 
 PRODUCT_COPY_FILES += \
     device/acer/picasso/vold.fstab:system/etc/vold.fstab \
@@ -68,6 +69,7 @@ PRODUCT_PACKAGES := \
     bttest \
     com.android.future.usb.accessory \
     audio.primary.picasso
+# TODO: Components should be implemented
 #    camera.picasso
 #    sensors.picasso
 #    lights.picasso
@@ -79,12 +81,6 @@ PRODUCT_PACKAGES += \
     gps.$(TARGET_PRODUCT) \
     MbmService \
     libmbm-ril
-
-# List of APN config prepared by madhuranand007
-# URL: http://forum.xda-developers.com/showpost.php?p=11301556&postcount=1
-# Change date: 12th February 2011 at 07:41 AM
-PRODUCT_COPY_FILES += \
-    device/acer/picasso/apns-conf.xml:system/etc/apns-conf.xml
 
 PRODUCT_CHARACTERISTICS := tablet
 

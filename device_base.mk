@@ -78,7 +78,7 @@ PRODUCT_PACKAGES := \
 # URL: http://sourceforge.net/apps/mediawiki/mbm/index.php?title=MBM_HAL_for_Android_Ice_Cream_Sandwich
 PRODUCT_PACKAGES += \
     mbmd \
-    gps.$(TARGET_PRODUCT) \
+    gps.$(TARGET_DEVICE) \
     MbmService \
     libmbm-ril
 

@@ -76,7 +76,7 @@ BOARD_HAVE_GPS_BCM := false
 USE_QEMU_GPS_HARDWARE := false
 # Enable MPM GPS devices
 BOARD_USES_MBM_GPS := true
-BOARD_GPS_LIBRARIES := gps.$(TARGET_DEVICE)
+BOARD_GPS_LIBRARIES := gps.picasso
 else
 # Enable Broadcom GPS devices
 BOARD_HAVE_GPS_BCM := true

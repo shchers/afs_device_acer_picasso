@@ -1,7 +1,9 @@
 # RIL and telephony related settings
 rild.libpath=/system/lib/libmbm-ril.so
 rild.libargs=-d /dev/ttyACM1 -i usb0
-telephony.lteOnCdmaDevice=0
+ro.telephony.lteOnCdmaDevice=0
+# HSPA+
+ro.telephony.default_network=15
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number

@@ -757,7 +757,7 @@ static void select_output_device(struct wm8903_audio_device *adev)
     speaker_on = adev->devices & AUDIO_DEVICE_OUT_SPEAKER;
     earpiece_on = adev->devices & AUDIO_DEVICE_OUT_EARPIECE;
 
-    LOGI("[%s]\n* headset_on = %s\n* headphone_on = %s\n* speaker_on = %s\n"
+    LOGV("[%s]\n* headset_on = %s\n* headphone_on = %s\n* speaker_on = %s\n"
          "* earpiece_on = %s", __FUNCTION__,
          headset_on > 0 ? "On" : "Off",
          headphone_on > 0 ? "On" : "Off",
@@ -851,7 +851,7 @@ static void select_input_device(struct wm8903_audio_device *adev)
 #ifndef LOG_STOP_SPAM
     LOGFUNC("%s(%p)", __FUNCTION__, adev);
 #endif
-    LOGD("[%s]\n* headset_on = %s\n* builtin_mic_on = %s", __FUNCTION__,
+    LOGV("[%s]\n* headset_on = %s\n* builtin_mic_on = %s", __FUNCTION__,
          headset_on > 0 ? "On" : "Off",
          builtin_mic_on > 0 ? "On" : "Off");
 
@@ -932,15 +932,15 @@ static int start_output_stream(struct acer_stream_out *out)
     }
 #endif
 
-    LOGD("[%s] card = %d port = %d", __FUNCTION__, card, port);
-    LOGI("channels = %d", out->config.channels);
-    LOGI("rate = %d", out->config.rate);
-    LOGI("period_size = %d", out->config.period_size);
-    LOGI("period_count = %d", out->config.period_count);
-    LOGI("bits = %d", (out->config.format == PCM_FORMAT_S32_LE) ? 32 : (out->config.format == PCM_FORMAT_S16_LE) ? 16 : -1 );
-    LOGI("start_threshold = %d", out->config.start_threshold);
-    LOGI("stop_threshold = %d", out->config.stop_threshold);
-    LOGI("silence_threshold = %d", out->config.silence_threshold);
+    LOGV("[%s] card = %d port = %d", __FUNCTION__, card, port);
+    LOGV("channels = %d", out->config.channels);
+    LOGV("rate = %d", out->config.rate);
+    LOGV("period_size = %d", out->config.period_size);
+    LOGV("period_count = %d", out->config.period_count);
+    LOGV("bits = %d", (out->config.format == PCM_FORMAT_S32_LE) ? 32 : (out->config.format == PCM_FORMAT_S16_LE) ? 16 : -1 );
+    LOGV("start_threshold = %d", out->config.start_threshold);
+    LOGV("stop_threshold = %d", out->config.stop_threshold);
+    LOGV("silence_threshold = %d", out->config.silence_threshold);
 
     out->pcm = pcm_open(card, port, PCM_OUT | PCM_MMAP, &out->config);
 

@@ -1,0 +1,5 @@
+<mixer>
+  <!-- These are the initial mixer settings -->
+  <ctl name="Digital Playback Volume" value="120" />
+  <ctl name="Int Spk Switch" value="1" />
+</mixer>

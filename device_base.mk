@@ -89,7 +89,8 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 # media config xml file
 PRODUCT_COPY_FILES += \
     device/acer/picasso/media_profiles.xml:system/etc/media_profiles.xml \
-    device/acer/picasso/media_codecs.xml:system/etc/media_codecs.xml
+    device/acer/picasso/media_codecs.xml:system/etc/media_codecs.xml \
+    device/acer/picasso/mixer_paths.xml:system/etc/mixer_paths.xml
 
 # Bluetooth config file
 PRODUCT_COPY_FILES += \

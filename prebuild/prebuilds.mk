@@ -12,7 +12,6 @@ LOCAL_PATH := device/acer/picasso/prebuild/
 # FIXME: this is a hack. This modules should be developed, but for now it was extracted from leaked FW.
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/acer/camera.tegra.so:system/lib/hw/camera.tegra.so \
-    $(LOCAL_PATH)/acer/lights.picasso.so:system/lib/hw/lights.picasso.so \
     $(LOCAL_PATH)/acer/sensors.tegra.so:system/lib/hw/sensors.tegra.so \
     $(LOCAL_PATH)/acer/asound.conf:system/etc/asound.conf \
     $(LOCAL_PATH)/acer/libasound.so:system/lib/libasound.so \

@@ -1,6 +1,6 @@
 # RIL and telephony related settings
 rild.libpath=/system/lib/libmbm-ril.so
-rild.libargs=-d /dev/ttyACM1 -i usb0
+rild.libargs=-d /dev/ttyACM1 -i rmnet0
 ro.telephony.lteOnCdmaDevice=0
 # HSPA+
 ro.telephony.default_network=15

@@ -15,7 +15,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/acer/sensors.tegra.so:system/lib/hw/sensors.tegra.so \
     $(LOCAL_PATH)/acer/asound.conf:system/etc/asound.conf \
     $(LOCAL_PATH)/acer/libasound.so:system/lib/libasound.so \
-    $(LOCAL_PATH)/acer/init.rc:root/init.rc \
     $(LOCAL_PATH)/acer/libmpl.so:system/lib/libmpl.so \
     $(LOCAL_PATH)/acer/libmllite.so:system/lib/libmllite.so \
     $(LOCAL_PATH)/acer/libmlplatform.so:system/lib/libmlplatform.so

@@ -42,5 +42,5 @@ $(call inherit-product, device/acer/picasso/device.mk)
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_picasso
 PRODUCT_DEVICE := picasso
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := Full Android on Acer Iconia A500/501 (Picasso)
+PRODUCT_BRAND := acer
+PRODUCT_MODEL := Full Android on Acer Picasso

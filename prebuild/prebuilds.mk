@@ -20,6 +20,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/acer/libmllite.so:system/lib/libmllite.so \
     $(LOCAL_PATH)/acer/libmlplatform.so:system/lib/libmlplatform.so
 
+# Google binaries
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/google/bootanimation.zip:system/media/bootanimation.zip
+
 # Broadcom binaries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/broadcom/bcm4329.hcd:system/etc/firmware/bcm4329.hcd \
